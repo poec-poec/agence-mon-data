@@ -14,9 +14,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.poecpoec.agence.interfaces.IDataRecovery;
-import com.poecpoec.agence.model.Adresse;
-import com.poecpoec.agence.model.Client;
+import agence.mon.interfaces.IDataRecovery;
+import agence.mon.model.Client;
 
 public class ClientDao implements IDataRecovery<Client>
 {
@@ -37,7 +36,7 @@ public class ClientDao implements IDataRecovery<Client>
     public List<Client> findAll()
     {
         // DAO utilisés
-        AdresseDao adresseDao = new AdresseDao();
+        // AdresseDao adresseDao = new AdresseDao();
         List<Client> clients = new ArrayList<>();
 
         try
@@ -61,8 +60,8 @@ public class ClientDao implements IDataRecovery<Client>
                 client.setPrenom(resultats.getString("prenom"));
                 client.setNumeroTel(resultats.getString("telephone"));
                 client.setEmail(resultats.getString("email"));
-                Adresse adresse = adresseDao.findByIdClient(client.getId());
-                client.setAdresse(adresse);
+                // Adresse adresse = adresseDao.findByIdClient(client.getId());
+                // client.setAdresse(adresse);
                 // je l'ajoute à ma liste
                 clients.add(client);
             }
@@ -95,7 +94,7 @@ public class ClientDao implements IDataRecovery<Client>
     public Client findById(int id)
     {
         // DAO utilisés
-        AdresseDao adresseDao = new AdresseDao();
+        // AdresseDao adresseDao = new AdresseDao();
         Client client = new Client();
         try
         {
@@ -119,9 +118,9 @@ public class ClientDao implements IDataRecovery<Client>
                 client.setEmail(resultats.getString("email"));
                 client.setNumeroTel(resultats.getString("telephone"));
 
-                Adresse adresse = adresseDao.findByIdClient(id);
-                // j'insère lles adresse dans la liste des clients
-                client.setAdresse(adresse);
+                // Adresse adresse = adresseDao.findByIdClient(id);
+                // // j'insère lles adresse dans la liste des clients
+                // client.setAdresse(adresse);
             }
 
             // Etape 6 : fermer le résultat

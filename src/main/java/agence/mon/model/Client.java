@@ -1,7 +1,5 @@
 package agence.mon.model;
 
-import com.poecpoec.agence.model.Adresse;
-
 /**
  * @author Administrateur
  *
