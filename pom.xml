@@ -3,4 +3,11 @@
   <groupId>agence-mon-data</groupId>
   <artifactId>agence-mon-data</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.39</version>
+  	</dependency>
+  </dependencies>
 </project>
